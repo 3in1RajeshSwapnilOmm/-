@@ -1,0 +1,178 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - Simple Responsive Table in CSS</title>
+  
+  
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+  
+<style>
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* general styling */
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+}
+</style>
+
+  
+  
+  
+  
+
+</head>
+
+<body translate="no" >
+  <table>
+  <caption>Membership</caption>
+  <thead>
+    <tr>
+      <th scope="col">Account</th>
+      <th scope="col">Type in ammount</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Period</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Account">Visa - 3412</td>
+      <td data-label="Due Date">04/01/2016</td>
+      <td data-label="Amount">Pro $1,190</td>
+      <td data-label="Period">03/01/2016 - 03/31/2016</td>
+    </tr>
+    <tr>
+      <td scope="row" data-label="Account">Visa - 6076</td>
+      <td data-label="Due Date">03/01/2016</td>
+      <td data-label="Amount">Premium $35443</td>
+      <td data-label="Period">02/01/2016 - 02/29/2016</td>
+    </tr>
+    <tr>
+      <td scope="row" data-label="Account">Corporate AMEX</td>
+      <td data-label="Due Date">03/01/2016</td>
+      <td data-label="Amount">Basic $1,181</td>
+      <td data-label="Period">02/01/2016 - 02/29/2016</td>
+    </tr>
+    <tr>
+      <td scope="row" data-label="Acount">Visa - 3412</td>
+      <td data-label="Due Date">02/01/2016</td>
+      <td data-label="Amount">Simple $842</td>
+      <td data-label="Period">01/01/2016 - 01/31/2016</td>
+    </tr>
+  </tbody>
+</table>
+  
+  
+  
+  
+
+</body>
+
+</html>
+ 
